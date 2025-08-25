@@ -1,74 +1,29 @@
-# 🚗 OOP Vehicle Practice
+# Account Transfer Demo - Unit Test Practice
 
-## 📘 Practice Overview
+## Scenario
 
-This practice helps you understand and apply **Object-Oriented Programming (OOP)** concepts in Java such as:
+We have implemented a simple **Account Transfer Service** that allows money to be transferred between two accounts. The implementation is already complete. Your task as trainees is to **write unit tests** to validate its behavior.
 
-* **Inheritance**
-* **Polymorphism**
-* **Encapsulation**
-* **Abstraction**
+## Learning Goals
 
-You will build a small program where multiple types of vehicles behave differently when accelerating, and drivers can operate them.
+* Practice **Test-Driven Thinking** (even though implementation exists).
+* Learn how to design **unit tests** based on requirements.
+* Improve skills in **JUnit5** and **assertions**.
+* Understand **edge cases** in financial transactions.
 
----
+## Requirements to Test
 
-## 🎯 Acceptance Criteria (AC)
+1. Transfer decreases the balance of the source account.
+2. Transfer increases the balance of the destination account.
+3. Transfer amount cannot be negative.
+4. Transfer cannot happen if the source account has insufficient balance.
+5. After successful transfer, the sum of balances remains unchanged.
 
-### ✅ AC1: Car acceleration
+## What To Do
 
-* A **Car** named `"Cool Car"` has a base speed of `25 km/h`.
-* When it speeds up, it accelerates `5 km/h`.
-* The car should display:
-  🖨️ `Cool Car: speed up to 30 km/h`
-
-### ✅ AC2: Truck acceleration
-
-* A **Truck** named `"Big Truck"` has a base speed of `20 km/h`.
-* When it speeds up, it accelerates `2 km/h`.
-* The truck should display:
-  🖨️ `Big Truck: speed up to 22 km/h`
-
-### ✅ AC3: Driver abstraction
-
-* A **Driver** can operate **any vehicle** (Car, Truck, etc).
-* The driver should invoke the vehicle’s acceleration and print its result.
-* For example:
-
-    * When driving `Cool Car` → 🖨️ `Cool Car: speed up to 30 km/h`
-    * When driving `Big Truck` → 🖨️ `Big Truck: speed up to 22 km/h`
-
-### ✅ AC4: Car engine affects acceleration
-
-* A **Car** uses an **Engine** to determine its acceleration.
-* There are two types of engines:
-
-    * `GasolineEngine` → provides `5 km/h` acceleration.
-    * `ElectricEngine` → provides `10 km/h` acceleration.
-* Example:
-
-    * A car with `ElectricEngine` at `25 km/h` → 🖨️ `Cool Car: speed up to 35 km/h`
+* Create a test class, e.g., `AccountServiceTest`.
+* Use **JUnit 5**.
+* Apply **Given/When/Then** style in test cases.
+* Cover both **happy path** and **error scenarios**.
 
 ---
-
-## 🛠️ Task Instructions
-
-* Create the necessary classes and interfaces.
-* Follow the OOP best practices.
-* Use method overriding where necessary.
-* Make sure the `Driver` class can accept any `Vehicle`.
-* Implement `toString()` or custom display logic for printing output.
-
----
-
-## 📦 Sample Output
-
-```
-Cool Car: speed up to 30 km/h
-Big Truck: speed up to 22 km/h
-Cool Car: speed up to 35 km/h
-```
-
----
-
-Happy coding! 🎉
